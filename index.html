@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Unduhan CBT SMPN 266 Jakarta</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .fade-in {
+            animation: fadeIn 0.4s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-blue-50 via-slate-100 to-indigo-100 min-h-screen text-slate-800 antialiased selection:bg-blue-200">
+
+    <div class="max-w-4xl mx-auto px-4 py-12 md:py-16">
+        
+        <!-- Header Section -->
+        <header class="text-center mb-12">
+            <div class="inline-block p-4 bg-white rounded-3xl shadow-xl shadow-blue-100/50 mb-6 transform transition hover:scale-105 duration-300">
+                <img src="https://smpnegeri266jkt.sch.id/wp-content/uploads/2023/06/cropped-1_Logo_SMP.-N-266-2.png" 
+                     alt="Logo SMPN 266" 
+                     class="w-20 h-20 md:w-24 md:h-24 object-contain">
+            </div>
+            <h1 class="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight mb-3">
+                CBT SMPN 266 JAKARTA
+            </h1>
+            <p class="text-slate-500 font-medium text-lg max-w-xl mx-auto">
+                Portal resmi unduhan aplikasi ujian berbasis komputer. Pilih perangkat yang Anda gunakan.
+            </p>
+        </header>
+
+        <!-- Platform Selection Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-10">
+            
+            <!-- Android Card -->
+            <button onclick="showSection('android')" id="btn-android" class="platform-btn group relative bg-white p-6 rounded-2xl shadow-md hover:shadow-xl border-2 border-transparent hover:border-emerald-500 transition-all duration-300 text-center flex flex-col items-center justify-center gap-4 focus:outline-none overflow-hidden">
+                <div class="absolute inset-0 bg-emerald-50 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div class="relative z-10 w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-600 group-hover:scale-110 transition-transform">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M17.523 15.3414C17.523 15.3414 17.6534 15.3414 17.7265 15.2683L19.4674 12.2471C19.5405 12.1009 19.4674 11.9547 19.3212 11.8816C19.175 11.8085 19.0288 11.8816 18.9557 12.0278L17.1852 15.0855C15.6503 14.3546 13.8961 13.916 12.0142 13.916C10.1323 13.916 8.37812 14.3546 6.84323 15.0855L5.07267 12.0278C4.99958 11.8816 4.8534 11.8085 4.70721 11.8816C4.56102 11.9547 4.48793 12.1009 4.56102 12.2471L6.30193 15.2683C6.37502 15.3414 6.50537 15.3414 6.50537 15.3414C2.85077 17.388 0.444747 21.0426 0.00620857 25.3551H24.0221C23.5836 21.0426 21.1776 17.388 17.523 15.3414ZM6.44445 22.2852C5.64043 22.2852 4.98259 21.6274 4.98259 20.8234C4.98259 20.0194 5.64043 19.3615 6.44445 19.3615C7.24846 19.3615 7.9063 20.0194 7.9063 20.8234C7.9063 21.6274 7.24846 22.2852 6.44445 22.2852ZM17.5839 22.2852C16.7799 22.2852 16.122 21.6274 16.122 20.8234C16.122 20.0194 16.7799 19.3615 17.5839 19.3615C18.3879 19.3615 19.0458 20.0194 19.0458 20.8234C19.0458 21.6274 18.3879 22.2852 17.5839 22.2852Z"/></svg>
+                </div>
+                <h2 class="relative z-10 text-xl font-bold text-slate-800">Android</h2>
+            </button>
+
+            <!-- iOS Card -->
+            <button onclick="showSection('ios')" id="btn-ios" class="platform-btn group relative bg-white p-6 rounded-2xl shadow-md hover:shadow-xl border-2 border-transparent hover:border-blue-500 transition-all duration-300 text-center flex flex-col items-center justify-center gap-4 focus:outline-none overflow-hidden">
+                <div class="absolute inset-0 bg-blue-50 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div class="relative z-10 w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 group-hover:scale-110 transition-transform">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12c0-5.523-4.477-10-10-10z" display="none"/><path d="M15.192 11.233c-.022-2.185 1.785-3.237 1.865-3.287-1.015-1.485-2.585-1.697-3.14-1.722-1.332-.134-2.605.786-3.284.786-.68 0-1.722-.764-2.822-.743-1.428.021-2.748.831-3.486 2.115-1.49 2.584-.381 6.41.144 8.272.569 2.015 1.576 4.384 3.722 4.304 2.146-.08 2.628-1.57 5.093-1.57 2.443 0 2.925 1.549 5.115 1.57 2.19.021 3.036-2.227 3.585-4.22.613-2.227 1.785-4.887 1.806-4.928-.042-.021-2.58-1.03-2.6-3.577zm-2.864-4.825c.808-.98 1.352-2.345 1.205-3.708-1.168.047-2.576.778-3.405 1.758-.743.876-1.395 2.262-1.226 3.603 1.293.1 2.617-.67 3.426-1.653z"/></svg>
+                </div>
+                <h2 class="relative z-10 text-xl font-bold text-slate-800">iOS / iPad</h2>
+            </button>
+
+            <!-- Windows Card -->
+            <button onclick="showSection('windows')" id="btn-windows" class="platform-btn group relative bg-white p-6 rounded-2xl shadow-md hover:shadow-xl border-2 border-transparent hover:border-cyan-500 transition-all duration-300 text-center flex flex-col items-center justify-center gap-4 focus:outline-none overflow-hidden">
+                <div class="absolute inset-0 bg-cyan-50 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div class="relative z-10 w-16 h-16 bg-cyan-100 rounded-full flex items-center justify-center text-cyan-600 group-hover:scale-110 transition-transform">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.951-1.801"/></svg>
+                </div>
+                <h2 class="relative z-10 text-xl font-bold text-slate-800">Windows PC</h2>
+            </button>
+        </div>
+
+        <!-- Content Area (Dynamic) -->
+        <div id="content-area" class="glass-panel rounded-3xl p-6 md:p-10 shadow-xl hidden relative overflow-hidden border-t-8">
+            <!-- Isi konten disuntikkan via JavaScript -->
+        </div>
+
+    </div>
+
+    <!-- JavaScript untuk mengatur Tab & Konten -->
+    <script>
+        const contentArea = document.getElementById('content-area');
+        const buttons = document.querySelectorAll('.platform-btn');
+
+        const contentData = {
+            android: {
+                color: 'border-emerald-500',
+                title: 'Aplikasi Android (.APK)',
+                icon: '<svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M17.523 15.3414C17.523 15.3414 17.6534 15.3414 17.7265 15.2683L19.4674 12.2471C19.5405 12.1009 19.4674 11.9547 19.3212 11.8816C19.175 11.8085 19.0288 11.8816 18.9557 12.0278L17.1852 15.0855C15.6503 14.3546 13.8961 13.916 12.0142 13.916C10.1323 13.916 8.37812 14.3546 6.84323 15.0855L5.07267 12.0278C4.99958 11.8816 4.8534 11.8085 4.70721 11.8816C4.56102 11.9547 4.48793 12.1009 4.56102 12.2471L6.30193 15.2683C6.37502 15.3414 6.50537 15.3414 6.50537 15.3414C2.85077 17.388 0.444747 21.0426 0.00620857 25.3551H24.0221C23.5836 21.0426 21.1776 17.388 17.523 15.3414ZM6.44445 22.2852C5.64043 22.2852 4.98259 21.6274 4.98259 20.8234C4.98259 20.0194 5.64043 19.3615 6.44445 19.3615C7.24846 19.3615 7.9063 20.0194 7.9063 20.8234C7.9063 21.6274 7.24846 22.2852 6.44445 22.2852ZM17.5839 22.2852C16.7799 22.2852 16.122 21.6274 16.122 20.8234C16.122 20.0194 16.7799 19.3615 17.5839 19.3615C18.3879 19.3615 19.0458 20.0194 19.0458 20.8234C19.0458 21.6274 18.3879 22.2852 17.5839 22.2852Z"/></svg>',
+                downloadText: 'Download Aplikasi Android',
+                downloadLink: 'https://drive.google.com/uc?export=download&id=1Taa3FXRugmnVpKl7OShx-ZXRvsDTQOKf',
+                btnClass: 'bg-emerald-600 hover:bg-emerald-700 focus:ring-emerald-300',
+                guide: `
+                    <h3 class="text-xl font-bold text-slate-800 mb-4 border-b pb-2">Panduan Instalasi & Mengatasi Error</h3>
+                    <ul class="space-y-4 text-slate-600">
+                        <li class="flex items-start">
+                            <span class="bg-emerald-100 text-emerald-700 rounded-full w-6 h-6 flex items-center justify-center font-bold text-sm mr-3 mt-0.5 shrink-0">1</span>
+                            <p>Klik tombol <strong>Download</strong> di atas untuk menyimpan file <code>.APK</code> ke HP Anda.</p>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="bg-emerald-100 text-emerald-700 rounded-full w-6 h-6 flex items-center justify-center font-bold text-sm mr-3 mt-0.5 shrink-0">2</span>
+                            <div>
+                                <p class="font-semibold text-slate-800 mb-1">Peringatan "Sumber Tidak Dikenal"</p>
+                                <p>Jika HP memblokir instalasi, klik <strong>Pengaturan (Settings)</strong> pada notifikasi, lalu aktifkan opsi <strong>"Izinkan dari sumber ini"</strong>. Tekan tombol <em>Back</em> dan lanjutkan install.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="bg-emerald-100 text-emerald-700 rounded-full w-6 h-6 flex items-center justify-center font-bold text-sm mr-3 mt-0.5 shrink-0">3</span>
+                            <div>
+                                <p class="font-semibold text-slate-800 mb-1">Diblokir oleh Google Play Protect?</p>
+                                <p>Jika muncul peringatan merah Play Protect, klik tulisan <strong>Detail selengkapnya (More details)</strong>, lalu pilih <strong>Tetap install (Install anyway)</strong>.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="bg-emerald-100 text-emerald-700 rounded-full w-6 h-6 flex items-center justify-center font-bold text-sm mr-3 mt-0.5 shrink-0">4</span>
+                            <p>Buka aplikasi dan ikuti ujian dengan aman. <strong>Perhatian:</strong> Jangan keluar dari aplikasi atau membuka layar belah selama ujian berlangsung.</p>
+                        </li>
+                    </ul>
+                `
+            },
+            ios: {
+                color: 'border-blue-500',
+                title: 'Konfigurasi iOS (.SEB)',
+                icon: '<svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M15.192 11.233c-.022-2.185 1.785-3.237 1.865-3.287-1.015-1.485-2.585-1.697-3.14-1.722-1.332-.134-2.605.786-3.284.786-.68 0-1.722-.764-2.822-.743-1.428.021-2.748.831-3.486 2.115-1.49 2.584-.381 6.41.144 8.272.569 2.015 1.576 4.384 3.722 4.304 2.146-.08 2.628-1.57 5.093-1.57 2.443 0 2.925 1.549 5.115 1.57 2.19.021 3.036-2.227 3.585-4.22.613-2.227 1.785-4.887 1.806-4.928-.042-.021-2.58-1.03-2.6-3.577zm-2.864-4.825c.808-.98 1.352-2.345 1.205-3.708-1.168.047-2.576.778-3.405 1.758-.743.876-1.395 2.262-1.226 3.603 1.293.1 2.617-.67 3.426-1.653z"/></svg>',
+                downloadText: 'Download File .SEB iOS',
+                downloadLink: 'https://drive.google.com/uc?export=download&id=1NdtkxX-8RdOKrXaoVhVRrpeS0eskClXD',
+                btnClass: 'bg-blue-600 hover:bg-blue-700 focus:ring-blue-300',
+                guide: `
+                    <h3 class="text-xl font-bold text-slate-800 mb-4 border-b pb-2">Panduan Penggunaan di iPhone/iPad</h3>
+                    <ul class="space-y-4 text-slate-600">
+                        <li class="flex items-start">
+                            <span class="bg-blue-100 text-blue-700 rounded-full w-6 h-6 flex items-center justify-center font-bold text-sm mr-3 mt-0.5 shrink-0">1</span>
+                            <div>
+                                <p class="mb-2"><strong>Wajib:</strong> Unduh aplikasi Safe Exam Browser (SEB) dari App Store terlebih dahulu.</p>
+                                <a href="https://apps.apple.com/us/app/safe-exam-browser/id1155001061" target="_blank" class="inline-flex items-center text-sm bg-black text-white px-3 py-1.5 rounded-lg hover:bg-gray-800">
+                                    <svg class="w-4 h-4 mr-1.5" fill="currentColor" viewBox="0 0 24 24"><path d="M15.192 11.233c-.022-2.185 1.785-3.237 1.865-3.287-1.015-1.485-2.585-1.697-3.14-1.722-1.332-.134-2.605.786-3.284.786-.68 0-1.722-.764-2.822-.743-1.428.021-2.748.831-3.486 2.115-1.49 2.584-.381 6.41.144 8.272.569 2.015 1.576 4.384 3.722 4.304 2.146-.08 2.628-1.57 5.093-1.57 2.443 0 2.925 1.549 5.115 1.57 2.19.021 3.036-2.227 3.585-4.22.613-2.227 1.785-4.887 1.806-4.928-.042-.021-2.58-1.03-2.6-3.577zm-2.864-4.825c.808-.98 1.352-2.345 1.205-3.708-1.168.047-2.576.778-3.405 1.758-.743.876-1.395 2.262-1.226 3.603 1.293.1 2.617-.67 3.426-1.653z"/></svg> Buka App Store
+                                </a>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="bg-blue-100 text-blue-700 rounded-full w-6 h-6 flex items-center justify-center font-bold text-sm mr-3 mt-0.5 shrink-0">2</span>
+                            <p>Klik tombol <strong>Download File .SEB</strong> di atas.</p>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="bg-blue-100 text-blue-700 rounded-full w-6 h-6 flex items-center justify-center font-bold text-sm mr-3 mt-0.5 shrink-0">3</span>
+                            <p>Buka file <code>SEB266jkt.seb</code> tersebut. Jika terbuka sebagai teks acak, klik ikon <strong>Share (Bagikan)</strong> dan pilih <strong>Salin ke SEB (Copy to SEB)</strong>.</p>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="bg-blue-100 text-blue-700 rounded-full w-6 h-6 flex items-center justify-center font-bold text-sm mr-3 mt-0.5 shrink-0">4</span>
+                            <p>Saat peringatan <em>Automatic Assessment Configuration</em> muncul, ketuk <strong>"Yes" atau "Izinkan"</strong> untuk mengunci layar.</p>
+                        </li>
+                    </ul>
+                `
+            },
+            windows: {
+                color: 'border-cyan-500',
+                title: 'Paket Windows (.RAR)',
+                icon: '<svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.951-1.801"/></svg>',
+                downloadText: 'Download File Windows',
+                downloadLink: 'https://drive.google.com/uc?export=download&id=1LbV9S5C32g6jqbWWNAlFBJT77SiE92bd',
+                btnClass: 'bg-cyan-600 hover:bg-cyan-700 focus:ring-cyan-300',
+                guide: `
+                    <h3 class="text-xl font-bold text-slate-800 mb-4 border-b pb-2">Panduan Install di PC/Laptop Windows</h3>
+                    <ul class="space-y-4 text-slate-600">
+                        <li class="flex items-start">
+                            <span class="bg-cyan-100 text-cyan-700 rounded-full w-6 h-6 flex items-center justify-center font-bold text-sm mr-3 mt-0.5 shrink-0">1</span>
+                            <p>Klik tombol <strong>Download File Windows</strong> untuk menyimpan file berformat <code>.RAR</code> atau <code>.ZIP</code>.</p>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="bg-cyan-100 text-cyan-700 rounded-full w-6 h-6 flex items-center justify-center font-bold text-sm mr-3 mt-0.5 shrink-0">2</span>
+                            <p>Ekstrak (keluarkan) isi file tersebut menggunakan aplikasi seperti <strong>WinRAR</strong> atau <strong>7-Zip</strong>. Klik kanan file lalu pilih <em>Extract Here</em>.</p>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="bg-cyan-100 text-cyan-700 rounded-full w-6 h-6 flex items-center justify-center font-bold text-sm mr-3 mt-0.5 shrink-0">3</span>
+                            <div>
+                                <p class="font-semibold text-slate-800 mb-1">Install SEB (Jika belum punya)</p>
+                                <p>Buka folder hasil ekstrak, cari dan install aplikasi <strong>Safe Exam Browser</strong> yang telah disediakan di dalamnya.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="bg-cyan-100 text-cyan-700 rounded-full w-6 h-6 flex items-center justify-center font-bold text-sm mr-3 mt-0.5 shrink-0">4</span>
+                            <p>Setelah terinstall, klik ganda (double click) pada file config <code>SEB266jkt.seb</code> untuk memulai ujian layar penuh.</p>
+                        </li>
+                    </ul>
+                `
+            }
+        };
+
+        function showSection(platform) {
+            const data = contentData[platform];
+            
+            // Reset state
+            contentArea.classList.remove('hidden', 'fade-in');
+            void contentArea.offsetWidth; // Trigger reflow untuk reset animasi
+            
+            // Ganti warna border atas berdasarkan platform
+            contentArea.className = `glass-panel rounded-3xl p-6 md:p-10 shadow-xl relative overflow-hidden border-t-8 fade-in ${data.color}`;
+
+            // Reset tombol (Hapus status aktif)
+            buttons.forEach(btn => {
+                btn.classList.remove('ring-4', 'ring-offset-2', 'ring-blue-200');
+                btn.classList.add('border-transparent');
+            });
+
+            // Set tombol aktif
+            const activeBtn = document.getElementById(`btn-${platform}`);
+            activeBtn.classList.remove('border-transparent');
+            activeBtn.classList.add(data.color.replace('border-t-8', '').trim(), 'ring-4', 'ring-offset-2', 'ring-opacity-50');
+            
+            // Update konten HTML
+            contentArea.innerHTML = `
+                <div class="flex flex-col md:flex-row md:items-center justify-between mb-8 pb-6 border-b border-gray-200 gap-6">
+                    <div>
+                        <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900">${data.title}</h2>
+                        <p class="text-slate-500 mt-1">Unduh dan ikuti instruksi pemasangan di bawah ini.</p>
+                    </div>
+                    <a href="${data.downloadLink}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-6 py-3.5 rounded-xl text-white font-bold shadow-lg transform transition hover:-translate-y-1 focus:outline-none focus:ring-4 ${data.btnClass}">
+                        ${data.icon}
+                        ${data.downloadText}
+                    </a>
+                </div>
+                <div class="bg-white/60 p-6 rounded-2xl border border-white/40">
+                    ${data.guide}
+                </div>
+            `;
+            
+            // Scroll sedikit ke area konten untuk UX HP
+            contentArea.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+    </script>
+</body>
+</html>
